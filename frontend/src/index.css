@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --color-primary-50: #ecfeff;
+    --color-primary-100: #cffafe;
+    --color-primary-200: #a5f3fc;
+    --color-primary-300: #67e8f9;
+    --color-primary-400: #22d3ee;
+    --color-primary-500: #06b6d4;
+    --color-primary-600: #0891b2;
+    --color-primary-700: #0e7490;
+    --color-primary-800: #155e75;
+    --color-primary-900: #164e63;
+}
+
+@layer base {
+    body {
+        @apply text-slate-800 antialiased selection:bg-primary-200 selection:text-primary-900;
+        background:
+            radial-gradient(circle at 8% 0%, rgba(34, 211, 238, 0.18), transparent 36%),
+            radial-gradient(circle at 92% 100%, rgba(16, 185, 129, 0.14), transparent 42%),
+            #f8fafc;
+        font-family: 'Manrope', 'Segoe UI', sans-serif;
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-family: 'Sora', 'Manrope', sans-serif;
+    }
+}
+
+@layer utilities {
+    .glass {
+        @apply bg-white/72 backdrop-blur-xl border border-white/35 shadow-xl;
+    }
+
+    .glass-dark {
+        @apply bg-slate-900/80 backdrop-blur-xl border border-slate-700/50 shadow-2xl;
+    }
+
+    .btn-primary {
+        @apply flex justify-center items-center px-6 py-3 border border-transparent rounded-xl shadow-md text-base font-semibold text-white bg-gradient-to-r from-primary-700 to-emerald-600 hover:from-primary-600 hover:to-emerald-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none;
+    }
+
+    .btn-secondary {
+        @apply flex justify-center items-center px-6 py-3 border border-slate-200 rounded-xl shadow-sm text-base font-semibold text-slate-700 bg-white/85 hover:bg-white hover:border-slate-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md;
+    }
+
+    .input-field {
+        @apply block w-full px-4 py-3 border border-slate-300 rounded-xl shadow-sm placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 sm:text-sm transition-colors duration-200 bg-white/50 focus:bg-white;
+    }
+
+    .surface-card {
+        @apply bg-white/80 border border-white/40 rounded-3xl shadow-lg backdrop-blur-md;
+    }
+
+    .section-title {
+        @apply text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900;
+    }
+}
