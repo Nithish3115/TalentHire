@@ -1,0 +1,40 @@
+# ===== BACKEND (Spring Boot / Maven) =====
+backend/target/
+backend/.mvn/
+backend/*.class
+backend/.env
+backend/**.env
+
+# Maven wrapper (optional to keep)
+!backend/.mvn/wrapper/maven-wrapper.jar
+
+# IDE files
+.idea/
+*.iml
+*.iws
+*.ipr
+.classpath
+.project
+.settings/
+
+# ===== FRONTEND (React / Vite / Node) =====
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+frontend/.env.production
+frontend/.env.*.local
+
+# Build output
+frontend/build/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ===== OS / Editor =====
+.DS_Store
+Thumbs.db
+.vscode/settings.json
